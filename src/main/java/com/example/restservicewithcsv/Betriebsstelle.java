@@ -1,9 +1,11 @@
 package com.example.restservicewithcsv;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.opencsv.bean.CsvBindByName;
 
 public class Betriebsstelle {
     @CsvBindByName(column = "RL100-Code")
+    @JsonIgnore
     private String code;
     @CsvBindByName(column = "RL100-Langname")
     private String langname;
