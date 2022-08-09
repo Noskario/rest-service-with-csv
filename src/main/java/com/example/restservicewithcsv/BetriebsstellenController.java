@@ -29,8 +29,8 @@ public class BetriebsstellenController {
                 return bs;
             }
         }
-
-        return null;
+        throw new BetriebsstelleNotFoundException(code);
+        //return null;
     }
     @GetMapping("/listall")
     public List<Betriebsstelle> allBetriebsstellen(){
