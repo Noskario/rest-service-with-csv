@@ -10,6 +10,16 @@ public class Betriebsstelle {
     @CsvBindByName(column = "RL100-Kurzname")
     private String kurzname;
 
+    @CsvBindByName(column="Typ Lang")
+    private String typ;
+
+    public String getTyp() {
+        return typ;
+    }
+
+    public void setTyp(String typ) {
+        this.typ = typ;
+    }
     public String getCode() {
         return code;
     }
