@@ -52,6 +52,7 @@ public class Betriebsstelle {
                 "code='" + code + '\'' +
                 ", langname='" + langname + '\'' +
                 ", kurzname='" + kurzname + '\'' +
+                ", typ='" + typ + '\'' +
                 '}';
     }
 }
