@@ -17,6 +17,6 @@ public class RestServiceWithCsvApplication {
 		//For convenience, I now open the started connection
 		//In order to do so, this application cannot be headless, so lets change that
 		System.setProperty("java.awt.headless", "false");
-		Desktop.getDesktop().browse(new URI("http://localhost:8899/listall"));
+		Desktop.getDesktop().browse(new URI("http://localhost:8899/"));
 	}
 }
