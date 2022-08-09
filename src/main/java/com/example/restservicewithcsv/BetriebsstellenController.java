@@ -1,7 +1,5 @@
 package com.example.restservicewithcsv;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -38,4 +36,17 @@ public class BetriebsstellenController {
     public List<Betriebsstelle> allBetriebsstellen(){
         return ReadBetriebstellenCSVFile.betriebsstellen;
     }
+
+    @GetMapping("")
+    public String welcomePage(){
+        return "Herzlich willkommen!\n\n<br>" +
+                "Um eine Betriebsstelle abzufragen, benutzen Sie folgende Syntax:\n\n" +
+                "'/betriebstelle/aamp'. Auch Leerzeichen sind zulässig: '/betriebsstelle/xoo a'\n<br>" +
+                "Auch folgende Syntax ist zulässig:\n" +
+                "'/betriebsstelle?code=aamp' bzw. '/betriebsstelle?code=xoo a'\n<br>" +
+                "Groß- und Kleinschreibung wird nicht beachtet.\n<br>" +
+                "Alle Stationen können mittels '//findall' betrachtet werden (sieht aber nicht besonders toll" +
+                " aus und ist unübersichtlich...)";
+    }
+
 }
